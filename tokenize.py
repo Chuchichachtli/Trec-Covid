@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
-
 import string
 stopword_file = open('stopwords.txt')
 sword = stopword_file.readlines()
@@ -11,9 +5,6 @@ stop_words = []
 for word in sword:
     stop_words.append(word.strip())
 stopword_file.close()
-
-
-# In[14]:
 
 
 import csv
@@ -26,26 +17,8 @@ with open('data.csv', encoding="latin-1") as csv_file:
         if line_count == 0:
             column_names = row
             line_count += 1
-        else:
-#             if(row[1] == "" and row[2] == ""):
-#                 print('no info')
-#             elif(row[1] != ""):
-#                 print("No title")
-#             elif(row[2] != ""):
-#                 print("No abstract")
-            
+        else:            
             Lines.append(row)
-len(Lines)
-
-
-# In[ ]:
-
-
-
-
-
-# In[24]:
-
 
 
 def remove_punc(new_doc , word):
@@ -74,46 +47,3 @@ for line in Lines:
     if doc_id in token_dict.keys():
         no_both += 1
     token_dict[doc_id] = doc_tokens
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
