@@ -10,6 +10,9 @@ Trec Covid Dataset Term Project for CmpE493 Information Retrieval
 ###### relevance-data : https://ir.nist.gov/covidSubmit/data/qrels-covid_d5_j0.5-5.txt
 Relevance data 1st column topic-id --  2nd column not relevant -- 3rd column document-id -- 4th column relevancy 0/1/2 
 
+###### result file : query-id Q0 document-id rank score STANDARD
+
+The field query-id is a alphanumeric sequence to identify the query. The second field, with "Q0" value, is currently ignored by trec_eval, just put it in the file. The field document-id is a alphanumeric sequence to identify the retrieved document. The field rank is an integer value which represents the document position in the ranking, but this field is also ignored by trec_eval. The field score can be an integer or float value to indicate the similarity degree between document and query, so the most relevants docs will have higher scores. The last field, with "STANDARD" value, is used only to identify this run (this name is also showed in the output), you can use any alphanumeric sequence.
 
 ### Relevant Papers : 
 
